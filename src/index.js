@@ -48,5 +48,9 @@ const newPlugin = options => {
 };
 
 module.exports = function (options) {
+  if (!options)
+    options = {};
+  if (!options.glob)
+    options.glob = {};
   return newPlugin(options);
 }
