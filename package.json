@@ -5,6 +5,7 @@
   "main": "lib/index.js",
   "scripts": {
     "build": "babel --presets es2015 src --out-dir lib",
+    "pretest": "npm run-script build",
     "test": "mocha test"
   },
   "author": "Jack Conway <jack@conelton.xyz>",
