@@ -4,6 +4,7 @@
   "description": "Allows glob patterns as paths for includes in Pug templates",
   "main": "lib/index.js",
   "scripts": {
+    "build": "babel --presets es2015 src --out-dir lib",
     "test": "mocha test"
   },
   "author": "Jack Conway <jack@conelton.xyz>",
