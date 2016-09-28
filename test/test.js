@@ -44,4 +44,8 @@ describe('pug-include-glob', function () {
     expectEqualRenders('globby-mixed-includes', 'globby-mixed-includes-dummy');
   });
   
+  it('should recursively apply to included files', function () {
+    expectEqualRenders('recursive-globby-includes', 'globby-include-dummy');
+  });
+  
 });
