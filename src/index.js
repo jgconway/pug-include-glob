@@ -38,8 +38,7 @@ const newPlugin = options => {
         let filenames = deglob(resolve(node.file.path));
         let paths = filenames.map(filename => relative(filename));
         let nodes = paths.map(path => setPath(clone(node), path));
-        let block = nodes.reduce(addInclude, newBlock(node));
-        replace(block);
+        replace(nodes);
         return false;
       });
       return ast;
