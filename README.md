@@ -19,6 +19,12 @@ let html = pug.renderFile('path/to/template.pug', {
 });
 ```
 
+### Express
+
+```javascript
+res.render('view_name', { plugins: [ pugIncludeGlob({ /* options */ }) ] })
+```
+
 ### Options
 
 - `glob` - Options object passed to `node-glob` methods. See [node-glob](http://github.com/isaacs/node-glob) for details.
