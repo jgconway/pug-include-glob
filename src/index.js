@@ -5,6 +5,7 @@ const glob = require('glob');
 const walk = require('pug-walk');
 const pugResolve = require('pug-load').resolve;
 const path = require('path');
+const minimatch = require('minimatch');
 
 const includeTypes = ['Include', 'RawInclude'];
 const isInclude = node => includeTypes.indexOf(node.type) !== -1;
@@ -24,11 +25,17 @@ const newBlock = node => ({
 });
 
 const newPlugin = options => {
+  const ignored = [].concat(options.ignore);
   const isGlobby = path => glob.hasMagic(path, options.glob);
   const deglob = pattern => glob.sync(pattern, options.glob);
+  const isIgnored = filename => ignored.some(pattern => {
+    return minimatch(filename, pattern);
+  });
   return {
     postParse: (ast, pugOptions) => {
       const source = pugOptions.filename;
+      if (isIgnored(source))
+        return ast;
       const sourceDir = path.dirname(source);
       const resolve = path => pugResolve(path, source, pugOptions);
       const relative = filename => path.relative(sourceDir, filename);
@@ -41,7 +48,6 @@ const newPlugin = options => {
         replace(nodes);
         return false;
       });
-      return ast;
     }
   };
 };

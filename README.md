@@ -28,6 +28,7 @@ res.render('view_name', { plugins: [ pugIncludeGlob({ /* options */ }) ] })
 ### Options
 
 - `glob` - Options object passed to `node-glob` methods. See [node-glob](http://github.com/isaacs/node-glob) for details.
+- `exclude` - Files that should not be checked by this plugin. Checking every file is time expensive so excluding files where possible is likely to improve performance.
 
 ## License
 MIT &copy; Jack Conway
