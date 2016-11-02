@@ -25,7 +25,7 @@ const newBlock = node => ({
 });
 
 const newPlugin = options => {
-  const ignored = [].concat(options.ignore);
+  const ignored = options.ignore ? [].concat(options.ignore) : [];
   const isGlobby = path => glob.hasMagic(path, options.glob);
   const deglob = pattern => glob.sync(pattern, options.glob);
   const isIgnored = filename => ignored.some(pattern => {
