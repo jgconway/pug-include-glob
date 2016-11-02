@@ -25,6 +25,14 @@ let html = pug.renderFile('path/to/template.pug', {
 res.render('view_name', { plugins: [ pugIncludeGlob({ /* options */ }) ] })
 ```
 
+### Gulp
+
+```javascript
+gulp.src(src)
+  .pipe(pug({ plugins: [ pugIncludeGlob({ /* options */ }) ] }))
+  .pipe(gulp.dest(dest));
+```
+
 ### Options
 
 - `glob` - Options object passed to `node-glob` methods. See [node-glob](http://github.com/isaacs/node-glob) for details.
