@@ -1,6 +1,6 @@
 {
   "name": "pug-include-glob",
-  "version": "0.3.3",
+  "version": "0.3.4",
   "description": "Allows glob patterns as paths for includes in Pug templates",
   "main": "lib/index.js",
   "scripts": {
@@ -8,8 +8,8 @@
     "pretest": "npm run-script build",
     "test": "mocha test"
   },
-  "author": "Jack Conway <jack@conelton.xyz>",
-  "repository": "conelton/pug-include-glob",
+  "author": "Jack Conway <jack@jgconway.com>",
+  "repository": "jgconway/pug-include-glob",
   "license": "MIT",
   "dependencies": {
     "glob": "^7.0.5",
