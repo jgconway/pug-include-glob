@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/conelton/pug-include-glob.svg?branch=master)](https://travis-ci.org/conelton/pug-include-glob)
+[![Build Status](https://travis-ci.org/jgconway/pug-include-glob.svg?branch=master)](https://travis-ci.org/jgconway/pug-include-glob)
 
 # pug-include-glob
 
