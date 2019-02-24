@@ -1,6 +1,6 @@
 {
   "name": "pug-include-glob",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "description": "Allows glob patterns as paths for includes in Pug templates",
   "main": "lib/index.js",
   "scripts": {
