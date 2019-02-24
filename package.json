@@ -5,8 +5,9 @@
   "main": "lib/index.js",
   "scripts": {
     "build": "babel src --out-dir lib",
-    "pretest": "npm run-script build",
-    "test": "mocha test"
+    "pretest": "npm run build",
+    "test": "mocha test",
+    "prepublishOnly": "npm test"
   },
   "author": "Jack Conway <jack@jgconway.com>",
   "repository": "jgconway/pug-include-glob",
