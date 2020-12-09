@@ -3,6 +3,10 @@
   "version": "0.4.2",
   "description": "Allows glob patterns as paths for includes in Pug templates",
   "main": "lib/index.js",
+  "files": [
+    "lib/",
+    "LICENSE"
+  ],
   "scripts": {
     "build": "babel src --out-dir lib",
     "pretest": "npm run build",
